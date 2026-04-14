@@ -68,7 +68,14 @@ Then, in your Xcode source files, import the module and use it:
     let titleColorAsset = AmiDesignSystem.Colors.Text.Title.blueFrance
     let partnerIconAsset = AmiDesignSystem.Icons.Ami.Services.demarcheNumeriqueGouvFr
 ```
+
+For the Marianne fonts to be available for your application, you have to load them by calling at application start:
+```swift
+    import AmiDesignSystem
     
+    FontLoader.registerFonts()
+```
+
 ## The `AMI-design-system-lab-xcodegen` sample
 
 The sample application is located in `Examples` folder.
