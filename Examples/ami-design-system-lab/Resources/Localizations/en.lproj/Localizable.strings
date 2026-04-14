@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  AMI-xcodegen
+
+  Created by Nicolas Buquet on 16/01/2026.
+  Copyright © 2026 DINUM. All rights reserved.
+*/
+
+// Common
+common_ok = "Ok";
+common_cancel = "Cancel";
+common_error = "Error";
+common_close = "Close";
+common_back = "Back";
