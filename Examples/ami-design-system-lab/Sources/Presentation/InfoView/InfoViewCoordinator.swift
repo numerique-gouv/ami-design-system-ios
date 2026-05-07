@@ -44,6 +44,7 @@ final class InfoViewCoordinator: AnyCoordinator {
             parts: [
                 InfoViewModel.Part(title: "Quand ?",
                                    content: "À partir du 6 juin"),
+                // swiftlint:disable line_length
                 InfoViewModel.Part(title: "Comment ça fonctionne ?",
                                    content:
                                    """
@@ -53,6 +54,7 @@ final class InfoViewCoordinator: AnyCoordinator {
 
                                    **Vous serez prévenu** en cas d'anomalies (dégradations, cambriolage ...).
                                    """),
+                // swiftlint:enable line_length
             ]
         )
     }
