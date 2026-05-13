@@ -27,9 +27,9 @@ let package = Package(
             name: "AmiDesignSystem",
         	path: "Sources",   
             resources: [
-            	.process("Resources/Colors.xcassets"),
-                .process("Resources/Icons.xcassets"),
-                .copy("Resources/fonts") // embed Marianne font,
+            	.process("DesignSystem/Resources/Colors.xcassets"),
+                .process("DesignSystem/Resources/Icons.xcassets"),
+                .copy("DesignSystem/Resources/fonts") // embed Marianne font,
                        ],
             plugins: [
             	.plugin(name: "SwiftGenPlugin", package: "SwiftGenPlugin"),
