@@ -31,5 +31,5 @@ packages:
   SwiftUI-Introspect:
     url: https://github.com/siteline/swiftui-introspect.git
     version: 26.0.0
-  AmiDesignSystem:
-    path: ../AmiDesignSystem
+  AMI-Design-System:
+    path: ..

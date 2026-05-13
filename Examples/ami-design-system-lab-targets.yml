@@ -109,11 +109,12 @@ targetTemplates:
     - package: SwiftUI-Introspect
       product: SwiftUIIntrospect
       embed: false
-    - package: AmiDesignSystem
+    - package: AMI-Design-System
       product: AmiDesignSystem
       
     sources:
     - path: ami-design-system-lab/Sources
+    - path: ami-design-system-lab/Resources
 
 #--------------------------------------------------------------------------------
 targets:
