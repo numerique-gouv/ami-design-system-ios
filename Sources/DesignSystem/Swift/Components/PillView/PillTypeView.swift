@@ -1,5 +1,5 @@
 //
-//  PillType.swift
+//  PillTypeView.swift
 //  Ami-lab-Production
 //
 //  Created by Nicolas Buquet on 05/03/2026.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PillType: View {
+struct PillTypeView: View {
     let label: String
     let iconName: String
     let foregroundColor: Color
@@ -32,7 +32,7 @@ struct PillType: View {
 }
 
 #Preview {
-    PillType(label: "consommation",
+    PillTypeView(label: "consommation",
              iconName: "cart",
              foregroundColor: .black,
              backgroundColor: .orange)

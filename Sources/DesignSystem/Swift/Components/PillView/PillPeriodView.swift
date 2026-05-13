@@ -1,5 +1,5 @@
 //
-//  PillPeriod.swift
+//  PillPeriodView.swift
 //  Ami-lab-Production
 //
 //  Created by Nicolas Buquet on 05/03/2026.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PillPeriod: View {
+struct PillPeriodView: View {
     let text: String
     let foregroundColor: Color
     let backgroundColor: Color
@@ -26,7 +26,7 @@ struct PillPeriod: View {
 }
 
 #Preview {
-    PillPeriod(text: "Du 20 décembre au 5 janvier 2006",
+    PillPeriodView(text: "Du 20 décembre au 5 janvier 2006",
                foregroundColor: .black,
                backgroundColor: .green)
 }
