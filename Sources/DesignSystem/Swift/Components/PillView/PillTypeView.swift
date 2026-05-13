@@ -14,6 +14,13 @@ public struct PillTypeView: View {
     let foregroundColor: Color
     let backgroundColor: Color
 
+    public init(label: String, iconName: String, foregroundColor: Color, backgroundColor: Color) {
+        self.label = label
+        self.iconName = iconName
+        self.foregroundColor = foregroundColor
+        self.backgroundColor = backgroundColor
+    }
+
     public var body: some View {
         HStack(spacing: 4.5) {
             Image(systemName: iconName)

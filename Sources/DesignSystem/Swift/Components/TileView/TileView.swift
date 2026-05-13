@@ -11,6 +11,11 @@ public struct TileView: View {
     @State var title: String
     @State var content: String
 
+    public init(title: String, content: String) {
+        self.title = title
+        self.content = content
+    }
+
     public var body: some View {
         VStack {
             Group {
