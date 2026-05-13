@@ -14,7 +14,7 @@ public struct PillTypeView: View {
     let foregroundColor: Color
     let backgroundColor: Color
 
-    var body: some View {
+    public var body: some View {
         HStack(spacing: 4.5) {
             Image(systemName: iconName)
             Text(label.uppercased())

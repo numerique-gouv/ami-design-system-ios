@@ -13,7 +13,7 @@ public struct PillPeriodView: View {
     let foregroundColor: Color
     let backgroundColor: Color
 
-    var body: some View {
+    public var body: some View {
         Text(text)
             .font(.caption)
             .foregroundStyle(foregroundColor)

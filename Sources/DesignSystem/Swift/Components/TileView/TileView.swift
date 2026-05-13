@@ -11,7 +11,7 @@ public struct TileView: View {
     @State var title: String
     @State var content: String
 
-    var body: some View {
+    public var body: some View {
         VStack {
             Group {
                 VStack(alignment: .leading) {
