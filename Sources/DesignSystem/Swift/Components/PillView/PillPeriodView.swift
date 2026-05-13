@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PillPeriodView: View {
+public struct PillPeriodView: View {
     let text: String
     let foregroundColor: Color
     let backgroundColor: Color

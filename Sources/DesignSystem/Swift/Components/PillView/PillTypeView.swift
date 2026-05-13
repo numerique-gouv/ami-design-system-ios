@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PillTypeView: View {
+public struct PillTypeView: View {
     let label: String
     let iconName: String
     let foregroundColor: Color

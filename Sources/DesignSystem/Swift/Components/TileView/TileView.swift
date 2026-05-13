@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TileView: View {
+public struct TileView: View {
     @State var title: String
     @State var content: String
 
