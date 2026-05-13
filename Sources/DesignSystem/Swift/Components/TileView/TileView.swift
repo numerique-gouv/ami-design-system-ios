@@ -21,10 +21,14 @@ public struct TileView: View {
             Group {
                 VStack(alignment: .leading) {
                     Text(title)
-                        .font(DsfrFont.h4.font)
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.leading)
+                        .font(DsfrFont.h5.font)
                         .foregroundStyle(AmiDesignSystem.Colors.Artwork.Major.blueFrance.swiftUIColor)
                     Text(content)
-                        .font(DsfrFont.textSM.font)
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.leading)
+                        .font(DsfrFont.textMD.font)
                     HStack {
                         AmiDesignSystem.Icons.Arrows.arrowRightSLine.swiftUIImage
                             .foregroundStyle(AmiDesignSystem.Colors.Artwork.Major.blueFrance.swiftUIColor)
@@ -43,6 +47,7 @@ public struct TileView: View {
 }
 
 #Preview {
+    let _ = FontLoader.registerFonts()
     NavigationStack {
         ScrollView {
             ForEach(0..<10) { i in
