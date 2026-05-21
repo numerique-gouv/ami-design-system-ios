@@ -42,7 +42,6 @@ struct FormPart02View: View {
             Spacer(minLength: 16.0)
             Toggle(isOn: $viewModel.item01) {}
                 .labelsHidden()
-                .toggleStyle(SwitchToggleStyle(tint: .accentColor)) // needed for Toggle widget.
         }
     }
 
@@ -53,7 +52,6 @@ struct FormPart02View: View {
             Spacer(minLength: 16.0)
             Toggle(isOn: $viewModel.item02) {}
                 .labelsHidden()
-                .toggleStyle(SwitchToggleStyle(tint: .accentColor)) // needed for Toggle widget.
         }
     }
 
@@ -64,7 +62,6 @@ struct FormPart02View: View {
             Spacer(minLength: 16.0)
             Toggle(isOn: $viewModel.item03) {}
                 .labelsHidden()
-                .toggleStyle(SwitchToggleStyle(tint: .accentColor)) // needed for Toggle widget.
         }
     }
 
@@ -75,7 +72,6 @@ struct FormPart02View: View {
             Spacer(minLength: 16.0)
             Toggle(isOn: $viewModel.item04) {}
                 .labelsHidden()
-                .toggleStyle(SwitchToggleStyle(tint: .accentColor)) // needed for Toggle widget.
         }
     }
 
