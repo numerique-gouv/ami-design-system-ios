@@ -19,17 +19,6 @@ struct ButtonGalleryView: View {
     }
 
     @ViewBuilder
-    private var secondaryButton: some View {
-        Button {
-            viewModel.processAction?(.secondaryAction)
-        } label: {
-            Text("Annuler")
-                .frame(maxWidth: .infinity)
-        }
-        .buttonStyle(ButtonStyleDsfr(type: .secondary))
-    }
-
-    @ViewBuilder
     private var primaryButton: some View {
         Button {
             viewModel.processAction?(.primaryAction)
@@ -38,6 +27,17 @@ struct ButtonGalleryView: View {
                 .frame(maxWidth: .infinity)
         }
         .buttonStyle(ButtonStyleDsfr(type: .primary))
+    }
+
+    @ViewBuilder
+    private var secondaryButton: some View {
+        Button {
+            viewModel.processAction?(.secondaryAction)
+        } label: {
+            Text("Annuler")
+                .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(ButtonStyleDsfr(type: .secondary))
     }
 
     @ViewBuilder
@@ -52,11 +52,40 @@ struct ButtonGalleryView: View {
         .disabled(true)
     }
 
+    @ViewBuilder
+    private var smallButton01: some View {
+        Button {
+            viewModel.processAction?(.primaryAction)
+        } label: {
+            Text("Small #1")
+                .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(ButtonStyleDsfr(type: .primary))
+    }
+
+    @ViewBuilder
+    private var smallButton02: some View {
+        Button {
+            viewModel.processAction?(.secondaryAction)
+        } label: {
+            Text("Small #2")
+                .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(ButtonStyleDsfr(type: .secondary))
+    }
+
     var body: some View {
         VStack(spacing: 16.0) {
             primaryButton
             secondaryButton
             primaryDisabledButton
+            HStack(spacing: 8.0) {
+                smallButton01
+                    .fixedSize()
+                smallButton02
+                    .fixedSize()
+                Spacer()
+            }
         }
         .padding(.horizontal, 32.0)
         .navigationTitle("Button Gallery")
