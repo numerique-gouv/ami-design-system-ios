@@ -10,6 +10,7 @@ This AMI Design System currently provides:
 - a set of named colors
 - a set of named icons
 - a set of Marianne font variants
+- a default DSFR accent color
 
 This repository contains:
 - a Swift Package in folder `AmiDesignSystem`
@@ -74,6 +75,25 @@ For the Marianne fonts to be available for your application, you have to load th
     import AmiDesignSystem
     
     FontLoader.registerFonts()
+```
+
+To configure DSFR default accent color for your application you have to apply it to your root SwiftUI hierarchy and configure it for UIKit too:
+- on your SwiftUI root hierarchy
+```swift
+    WindowGroup {
+        ContentView()
+        // Define global view hierarchy accent color like this because this color is defined externaly.
+            .tint(.dsfrAccentColor)
+    }
+```
+- in your application main class
+```swift
+    init() {
+    	...
+        // Set default accent color for UIKit components.
+        Color.setUIKitAccentColor()
+        ...
+    }
 ```
 
 ## The `AMI-design-system-lab-xcodegen` sample
