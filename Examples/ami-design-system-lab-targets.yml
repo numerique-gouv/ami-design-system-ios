@@ -78,7 +78,6 @@ targetTemplates:
       ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
       DEVELOPMENT_ASSET_PATHS: ami-design-system-lab/Resources/Preview
       ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: false # Done by SwiftGen
-      ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: text/title/blue-france
 #       SWIFT_OBJC_BRIDGING_HEADER: Project-Bridging-Header.h
 #       SWIFT_OBJC_INTERFACE_HEADER_NAME: GeneratedInterface-Swift.h
 
