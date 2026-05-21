@@ -23,7 +23,7 @@ public enum FontLoader {
 
     public static func registerFonts() {
         print("[FontLoader]: Register fonts")
-        Bundle.main.urls(forResourcesWithExtension: nil, subdirectory: "fonts")?.forEach {
+        Bundle.module.urls(forResourcesWithExtension: nil, subdirectory: "fonts")?.forEach {
             registerFont(fontURL: $0)
         }
     }
