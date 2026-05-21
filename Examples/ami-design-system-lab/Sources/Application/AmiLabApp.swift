@@ -35,6 +35,8 @@ struct AmiLabApp: App {
     }()
 
     init() {
+        // Set default accent color for UIKit components.
+        Color.setUIKitAccentColor()
         FontLoader.registerFonts()
     }
 
@@ -42,6 +44,7 @@ struct AmiLabApp: App {
         WindowGroup {
             RouterView(router: router)
 //            router.rootCoordinator.toView()
+                .tint(.dsfrAccentColor) // Define global view hierarchy accent color like this because this color is defined externaly.
         }
     }
 }
