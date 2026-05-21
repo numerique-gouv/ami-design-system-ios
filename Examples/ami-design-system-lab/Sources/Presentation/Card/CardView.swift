@@ -31,13 +31,13 @@ struct CardView: View {
     private var contentColumn: some View {
         HStack(spacing: 0.0) {
             VStack(alignment: .leading, spacing: 8.0) {
-                PillType(label: viewModel.type.label,
-                         iconName: viewModel.type.iconName,
-                         foregroundColor: viewModel.type.foregroundColor,
-                         backgroundColor: viewModel.type.backgroundColor)
-                PillPeriod(text: viewModel.period.text,
-                           foregroundColor: Color(hex: 0x161616),
-                           backgroundColor: Color(hex: 0xEEEEEE))
+                PillTypeView(label: viewModel.type.label,
+                             iconName: viewModel.type.iconName,
+                             foregroundColor: viewModel.type.foregroundColor,
+                             backgroundColor: viewModel.type.backgroundColor)
+                PillPeriodView(text: viewModel.period.text,
+                               foregroundColor: Color(hex: 0x161616),
+                               backgroundColor: Color(hex: 0xEEEEEE))
                 Text(viewModel.title)
                     .font(.dsfrH6)
                     .bold()
