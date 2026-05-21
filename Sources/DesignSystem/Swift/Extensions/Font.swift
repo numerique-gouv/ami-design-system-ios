@@ -47,11 +47,14 @@ private extension Font {
     static let dsfrTextMD = Font.custom(dsfrFontRegularFontname, size: DsfrFont.textMD.fontSize, relativeTo: .title3)
     static let dsfrTextSM = Font.custom(dsfrFontRegularFontname, size: DsfrFont.textSM.fontSize, relativeTo: .headline)
     static let dsfrTextXS = Font.custom(dsfrFontRegularFontname, size: DsfrFont.textXS.fontSize, relativeTo: .footnote)
+    
+    static let buttonLabel = Font.custom(dsfrFontMediumFontname, size: DsfrFont.buttonLabel.fontSize, relativeTo: .title)
 }
 
 public enum DsfrFont {
     case h1, h2, h3, h4, h5, h6
     case textXL, textLG, textMD, textSM, textXS
+    case buttonLabel
     
     public var font: Font {
         switch self {
@@ -61,12 +64,14 @@ public enum DsfrFont {
         case .h4: .dsfrH4
         case .h5: .dsfrH5
         case .h6: .dsfrH6
-            
+
         case .textXL: .dsfrTextXL
         case .textLG: .dsfrTextLG
         case .textMD: .dsfrTextMD
         case .textSM: .dsfrTextSM
         case .textXS: .dsfrTextXS
+            
+        case .buttonLabel: .buttonLabel
         }
     }
     
@@ -84,6 +89,8 @@ public enum DsfrFont {
         case .textMD: 16.0
         case .textSM: 14.0
         case .textXS: 12.0
+            
+        case .buttonLabel: 18.0
         }
     }
 
@@ -101,6 +108,8 @@ public enum DsfrFont {
         case .textMD: 24.0
         case .textSM: 24.0
         case .textXS: 20.0
+            
+        case .buttonLabel: 24.0
         }
     }
     
