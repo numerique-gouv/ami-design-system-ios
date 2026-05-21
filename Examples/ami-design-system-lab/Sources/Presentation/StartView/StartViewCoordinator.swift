@@ -26,6 +26,8 @@ final class StartViewCoordinator: AnyCoordinator {
                 self.pushIconGallery(router: router)
             case .fontGallery:
                 self.pushFontGallery(router: router)
+            case .buttonGallery:
+                self.pushButtonGallery(router: router)
             case .demoUI:
                 self.pushMainView(router: router)
             }
@@ -60,6 +62,13 @@ final class StartViewCoordinator: AnyCoordinator {
     func pushFontGallery(router: Router) {
         let viewModel = FontGalleryViewModel()
         let coordinator = FontGalleryCoordinator(viewModel: viewModel)
+        coordinator.prepare(router: router)
+        router.push(coordinator: coordinator)
+    }
+
+    func pushButtonGallery(router: Router) {
+        let viewModel = ButtonGalleryViewModel()
+        let coordinator = ButtonGalleryCoordinator(viewModel: viewModel)
         coordinator.prepare(router: router)
         router.push(coordinator: coordinator)
     }

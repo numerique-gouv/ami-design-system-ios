@@ -21,6 +21,7 @@ class StartViewModel {
         case colorGallery
         case iconGallery
         case fontGallery
+        case buttonGallery
         case demoUI
     }
 
@@ -30,6 +31,7 @@ class StartViewModel {
         Item(title: "Color Gallery", action: .colorGallery),
         Item(title: "Icon Gallery", action: .iconGallery),
         Item(title: "Font Gallery", action: .fontGallery),
+        Item(title: "Button  UI", action: .buttonGallery),
         Item(title: "Démo UI", action: .demoUI),
     ]
 }

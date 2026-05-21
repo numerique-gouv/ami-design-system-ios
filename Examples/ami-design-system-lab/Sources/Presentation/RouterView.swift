@@ -59,6 +59,8 @@ struct RouterView: View {
             print("iconGallery tapped!")
         case .fontGallery:
             print("fontGallery tapped!")
+        case .buttonGallery:
+            print("buttonGallery tapped!")
         case .demoUI:
             print("Demo UI tapped!")
         }

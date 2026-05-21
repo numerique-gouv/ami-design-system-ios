@@ -19,7 +19,9 @@ struct AmiLabApp: App {
             case .iconGallery:
                 print("iconGallery tapped!")
             case .fontGallery:
-                print("colofontGalleryrGallery tapped!")
+                print("fontGalleryy tapped!")
+            case .buttonGallery:
+                print("buttontGalleryrGallery tapped!")
             case .demoUI:
                 print("Demo UI tapped!")
             }
