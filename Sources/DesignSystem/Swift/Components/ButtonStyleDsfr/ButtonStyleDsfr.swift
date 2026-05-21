@@ -25,7 +25,7 @@ public struct ButtonStyleDsfr: ButtonStyle {
     public init(type: ButtonStyleDsfrType) {
         self.type = type
     }
-    
+
     private func color(configuration: Configuration) -> Color {
         switch type {
         case .primary: .white
@@ -68,7 +68,6 @@ public struct ButtonStyleDsfr: ButtonStyle {
     }
     
     public func makeBody(configuration: Configuration) -> some View {
-        let textColorAsset = isEnabled ? AmiDesignSystem.Colors.Text.Inverted.blueFrance : AmiDesignSystem.Colors.Text.Disabled.grey
         configuration.label
             .dsfrFont(.buttonLabel)
             .foregroundStyle(labelColor)
@@ -77,7 +76,7 @@ public struct ButtonStyleDsfr: ButtonStyle {
             .background {
                 background(configuration: configuration)
             }
-            // Full width
+        // Full width
             .frame(maxWidth: .infinity)
             .contentShape(RoundedRectangle(cornerRadius: Self.CORNER_RADIUS))
         // .scaleEffect(configuration.isPressed ? 1.2 : 1)
