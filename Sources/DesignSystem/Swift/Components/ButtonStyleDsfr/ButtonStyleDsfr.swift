@@ -9,6 +9,9 @@
 import SwiftUI
 
 public struct ButtonStyleDsfr: ButtonStyle {
+    // Declare Environment variable to know if button is enabled or disabled.
+    @Environment(\.isEnabled) private var isEnabled
+
     private static let CORNER_RADIUS = 0.0
     private static let PADDING = 16.0
 
@@ -32,8 +35,18 @@ public struct ButtonStyleDsfr: ButtonStyle {
 
     private func backgroundColor(configuration: Configuration) -> Color {
         switch type {
-        case .primary: Color(asset: AmiDesignSystem.Colors.Background.Active.blueFrance).opacity(configuration.isPressed ? 0.5 : 1.0)
-        case .secondary: .white
+        case .primary:
+            if isEnabled {
+                Color(asset: AmiDesignSystem.Colors.Background.Active.blueFrance).opacity(configuration.isPressed ? 0.5 : 1.0)
+            } else {
+                Color(asset: AmiDesignSystem.Colors.Background.Disabled.grey)
+            }
+        case .secondary:
+            if isEnabled {
+                .white
+            } else {
+                Color(asset: AmiDesignSystem.Colors.Background.Disabled.grey)
+            }
         }
     }
 
@@ -45,10 +58,20 @@ public struct ButtonStyleDsfr: ButtonStyle {
         }
     }
 
+    private var labelColor: Color {
+        switch type {
+        case .primary:
+            (isEnabled ? AmiDesignSystem.Colors.Text.Inverted.blueFrance : AmiDesignSystem.Colors.Text.Disabled.grey).swiftUIColor
+        case .secondary:
+            (isEnabled ? AmiDesignSystem.Colors.Text.Action.High.blueFrance : AmiDesignSystem.Colors.Text.Disabled.grey).swiftUIColor
+        }
+    }
+    
     public func makeBody(configuration: Configuration) -> some View {
+        let textColorAsset = isEnabled ? AmiDesignSystem.Colors.Text.Inverted.blueFrance : AmiDesignSystem.Colors.Text.Disabled.grey
         configuration.label
-            .fontWeight(.semibold)
-            .padding(16.0)
+            .dsfrFont(.buttonLabel)
+            .foregroundStyle(labelColor)
             .padding(Self.PADDING)
             .foregroundColor(color(configuration: configuration))
             .background {
