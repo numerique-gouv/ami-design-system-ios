@@ -6,6 +6,7 @@
 //  Copyright © 2026 DINUM. All rights reserved.
 //
 
+import AmiDesignSystem
 import SwiftUI
 
 struct FormPart02View: View {
@@ -86,7 +87,7 @@ struct FormPart02View: View {
             Text("Précédent")
                 .frame(maxWidth: .infinity)
         }
-        .buttonStyle(DsfrButtonStyle(type: .secondary))
+        .buttonStyle(ButtonStyleDsfr(type: .secondary))
     }
 
     @ViewBuilder
@@ -97,7 +98,7 @@ struct FormPart02View: View {
             Text("Continuer")
                 .frame(maxWidth: .infinity)
         }
-        .buttonStyle(DsfrButtonStyle(type: .primary))
+        .buttonStyle(ButtonStyleDsfr(type: .primary))
     }
 
     var body: some View {

@@ -1,22 +1,25 @@
 //
-//  ButtonDSFR.swift
+//  ButtonStyleDsfr.swift
 //  AMI-lab-xcodegen
 //
 //  Created by Nicolas Buquet on 09/03/2026.
 //  Copyright © 2026 DINUM. All rights reserved.
 //
 
-import AmiDesignSystem
 import SwiftUI
 
-struct DsfrButtonStyle: ButtonStyle {
-    enum DsfrButtonStyleType {
+public struct ButtonStyleDsfr: ButtonStyle {
+    public enum ButtonStyleDsfrType {
         case primary
         case secondary
     }
 
-    let type: DsfrButtonStyleType
+    private let type: ButtonStyleDsfrType
 
+    public init(type: ButtonStyleDsfrType) {
+        self.type = type
+    }
+    
     private func color(configuration: Configuration) -> Color {
         switch type {
         case .primary: .white
@@ -39,7 +42,7 @@ struct DsfrButtonStyle: ButtonStyle {
         }
     }
 
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .fontWeight(.semibold)
             .padding(16.0)

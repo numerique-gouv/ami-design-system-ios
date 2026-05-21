@@ -78,7 +78,7 @@ struct FormPart01View: View {
             Text("Annuler")
                 .frame(maxWidth: .infinity)
         }
-        .buttonStyle(DsfrButtonStyle(type: .secondary))
+        .buttonStyle(ButtonStyleDsfr(type: .secondary))
     }
 
     @ViewBuilder
@@ -89,7 +89,7 @@ struct FormPart01View: View {
             Text("Continuer")
                 .frame(maxWidth: .infinity)
         }
-        .buttonStyle(DsfrButtonStyle(type: .primary))
+        .buttonStyle(ButtonStyleDsfr(type: .primary))
     }
 
     var body: some View {

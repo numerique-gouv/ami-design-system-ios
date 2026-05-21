@@ -6,6 +6,7 @@
 //  Copyright © 2026 DINUM. All rights reserved.
 //
 
+import AmiDesignSystem
 import SwiftUI
 
 struct InfoView: View {
@@ -71,7 +72,7 @@ struct InfoView: View {
                 Text("Bénéficier de ce service")
                     .frame(maxWidth: .infinity)
             }
-            .buttonStyle(DsfrButtonStyle(type: .primary))
+            .buttonStyle(ButtonStyleDsfr(type: .primary))
             .padding(.horizontal, 16.0)
             .toolbar {
                 toolbar

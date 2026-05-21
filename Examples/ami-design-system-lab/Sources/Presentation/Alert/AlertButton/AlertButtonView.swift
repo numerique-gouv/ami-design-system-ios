@@ -6,6 +6,7 @@
 //  Copyright © 2026 DINUM. All rights reserved.
 //
 
+import AmiDesignSystem
 import SwiftUI
 
 struct AlertButtonView: View {
@@ -17,8 +18,8 @@ struct AlertButtonView: View {
 
     var buttonStyle: some ButtonStyle {
         switch configuration.type {
-        case .primary: DsfrButtonStyle(type: .primary)
-        case .secondary: DsfrButtonStyle(type: .secondary)
+        case .primary: ButtonStyleDsfr(type: .primary)
+        case .secondary: ButtonStyleDsfr(type: .secondary)
         }
     }
 
