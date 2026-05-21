@@ -10,6 +10,8 @@ import SwiftUI
 
 public struct ButtonStyleDsfr: ButtonStyle {
     private static let CORNER_RADIUS = 0.0
+    private static let PADDING = 16.0
+
     public enum ButtonStyleDsfrType {
         case primary
         case secondary
@@ -47,6 +49,7 @@ public struct ButtonStyleDsfr: ButtonStyle {
         configuration.label
             .fontWeight(.semibold)
             .padding(16.0)
+            .padding(Self.PADDING)
             .foregroundColor(color(configuration: configuration))
             .background {
                 background(configuration: configuration)
