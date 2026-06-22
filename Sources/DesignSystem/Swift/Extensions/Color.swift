@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+#if os(macOS)
+  import AppKit
+#elseif os(iOS)
+  import UIKit
+#endif
 
 public extension Color {
     private static let DSFR_COLOR_NAME = "text/active/blue-france"
 
-    public static let dsfrAccentColor = Color(DSFR_COLOR_NAME, bundle: Bundle.module)
+    static let dsfrAccentColor = Color(DSFR_COLOR_NAME, bundle: Bundle.module)
     
-    public static func setUIKitAccentColor() {
-        UIView.appearance().tintColor = UIColor(named: Color.DSFR_COLOR_NAME, in: Bundle.module, compatibleWith: .current)
+    static func setUIKitAccentColor() {
+        #if os(iOS)
+            UIView.appearance().tintColor = UIColor(named: Color.DSFR_COLOR_NAME, in: Bundle.module, compatibleWith: .current)
+        #endif
     }
 }
