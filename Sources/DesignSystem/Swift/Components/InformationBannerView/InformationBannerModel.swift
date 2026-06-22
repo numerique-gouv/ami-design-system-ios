@@ -11,7 +11,7 @@ public struct InformationBannerModel: Identifiable {
     public typealias LinkAction = () -> Void
     public typealias CloseAction = () -> Void
 
-    public let id: UUID = UUID()
+    public let id: UUID
     let informationType: InformationBannerType
     let title: String
     let icon: DsfrImageAsset
@@ -24,13 +24,15 @@ public struct InformationBannerModel: Identifiable {
         onClose != nil
     }
 
-    public init(informationType: InformationBannerType,
-         title: String,
-         icon: DsfrImageAsset? = nil,
-         content: String? = nil,
-         link: String? = nil,
-         onClickLink: LinkAction? = nil,
-         onClose: CloseAction? = nil) {
+    public init(id: UUID,
+                informationType: InformationBannerType,
+                title: String,
+                icon: DsfrImageAsset? = nil,
+                content: String? = nil,
+                link: String? = nil,
+                onClickLink: LinkAction? = nil,
+                onClose: CloseAction? = nil) {
+        self.id = id
         self.informationType = informationType
         self.title = title
         self.icon = icon ?? informationType.defaultIcon
