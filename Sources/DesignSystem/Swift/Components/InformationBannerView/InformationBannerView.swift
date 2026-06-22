@@ -12,7 +12,7 @@ public struct InformationBannerView: View, @MainActor Identifiable {
 
     public var id: UUID { model.id }
 
-    init(model: InformationBannerModel) {
+    public init(model: InformationBannerModel) {
         self.model = model
     }
 

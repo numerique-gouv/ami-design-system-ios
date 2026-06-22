@@ -8,8 +8,8 @@
 import Foundation
 
 public struct InformationBannerModel: Identifiable {
-    typealias LinkAction = () -> Void
-    typealias CloseAction = () -> Void
+    public typealias LinkAction = () -> Void
+    public typealias CloseAction = () -> Void
 
     public let id: UUID = UUID()
     let informationType: InformationBannerType
@@ -24,7 +24,7 @@ public struct InformationBannerModel: Identifiable {
         onClose != nil
     }
 
-    init(informationType: InformationBannerType,
+    public init(informationType: InformationBannerType,
          title: String,
          icon: DsfrImageAsset? = nil,
          content: String? = nil,
