@@ -75,6 +75,7 @@ public struct InformationBannerView: View, @MainActor Identifiable {
 #Preview("Light mode") {
     VStack(spacing: 16) {
         InformationBannerView(model: InformationBannerModel(
+            id: UUID(),
             informationType: .warning,
             title: "Connexion indisponible",
             content: "Vérifiez votre connexion et réessayez.",
@@ -83,12 +84,14 @@ public struct InformationBannerView: View, @MainActor Identifiable {
             onClose: { print("Closed") })
         )
         InformationBannerView(model: InformationBannerModel(
+            id: UUID(),
             informationType: .information,
             title: "Nouvelle démarche disponible",
             content: "Vérifiez votre connexion et réessayez.",
             link: "Lien de consultation")
         )
         InformationBannerView(model: InformationBannerModel(
+            id: UUID(),
             informationType: .error,
             title: "Application hors-service",
             content: "Vérifiez votre connexion et réessayez.",
@@ -97,6 +100,7 @@ public struct InformationBannerView: View, @MainActor Identifiable {
             onClose: { print("Closed") })
         )
         InformationBannerView(model: InformationBannerModel(
+            id: UUID(),
             informationType: .validation,
             title: "Connexion rétablie",
             content: "L'application est de nouveau fonctionnelle.",
@@ -108,6 +112,7 @@ public struct InformationBannerView: View, @MainActor Identifiable {
 #Preview("Dark mode") {
     VStack(spacing: 16) {
         InformationBannerView(model: InformationBannerModel(
+            id: UUID(),
             informationType: .warning,
             title: "Connexion indisponible",
             content: "Vérifiez votre connexion et réessayez.",
@@ -116,12 +121,14 @@ public struct InformationBannerView: View, @MainActor Identifiable {
             onClose: { print("Closed") })
         )
         InformationBannerView(model: InformationBannerModel(
+            id: UUID(),
             informationType: .information,
             title: "Nouvelle démarche disponible",
             content: "Vérifiez votre connexion et réessayez.",
             link: "Lien de consultation")
         )
         InformationBannerView(model: InformationBannerModel(
+            id: UUID(),
             informationType: .error,
             title: "Application hors-service",
             content: "Vérifiez votre connexion et réessayez.",
@@ -130,6 +137,7 @@ public struct InformationBannerView: View, @MainActor Identifiable {
             onClose: { print("Closed") })
         )
         InformationBannerView(model: InformationBannerModel(
+            id: UUID(),
             informationType: .validation,
             title: "Connexion rétablie",
             content: "L'application est de nouveau fonctionnelle.",
