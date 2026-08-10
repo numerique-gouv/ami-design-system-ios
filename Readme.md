@@ -24,9 +24,14 @@ This repository contains:
     swift build
 ```
 
-The Swift Package project uses `SwiftGen` plugin (<https://github.com/SwiftGen/SwiftGenPlugin>) to generate at build time Swift classes with hierarchical content:
+### How to authorize SwiftGenPlugin
+This Swift Package project uses [SwiftGenPlugin](https://github.com/SwiftGen/SwiftGenPlugin) to generate at build time Swift classes with hierarchical content:
 - AmiDesignSystem.Colors
 - AmiDesignSystem.Icons
+
+It must be authorized in Xcode the first time you build the package else the compilation fails.
+
+If Xcode doesn't present you the popup window to allow the use of SwiftGenPlugin, you can edit file `~/Library/org.swift.swiftpm/security/plugins.json` to remove SwiftGenPlugin entry. This should enable Xcode to present the popup again.
 
 ### What to find in the Swift Package
 
