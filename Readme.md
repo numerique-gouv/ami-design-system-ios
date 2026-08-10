@@ -30,8 +30,19 @@ This Swift Package project uses [SwiftGenPlugin](https://github.com/SwiftGen/Swi
 - AmiDesignSystem.Icons
 
 It must be authorized in Xcode the first time you build the package else the compilation fails.
+<img width="645" height="114" alt="Screenshot 2026-08-08 at 13 30 45" src="https://github.com/user-attachments/assets/d96489c8-e788-49d5-b892-c71778f029b1" />
+<img width="351" height="109" alt="Screenshot 2026-08-08 at 13 51 14" src="https://github.com/user-attachments/assets/f06c3c0e-b778-4043-b330-335d53dbc6d7" />
 
 If Xcode doesn't present you the popup window to allow the use of SwiftGenPlugin, you can edit file `~/Library/org.swift.swiftpm/security/plugins.json` to remove SwiftGenPlugin entry. This should enable Xcode to present the popup again.
+```json
+{
+  "fingerprint" : "879b85a470cacd70c19e22eb7e11a3aed66f4068",
+  "packageIdentity" : "swiftgenplugin",
+  "targetName" : "SwiftGenPlugin"
+}
+```
+
+<img width="265" height="271" alt="Screenshot 2026-08-08 at 13 51 27" src="https://github.com/user-attachments/assets/1342978b-962b-4812-bf8e-33182b091ea9" />
 
 ### What to find in the Swift Package
 
